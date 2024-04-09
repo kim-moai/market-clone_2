@@ -1,0 +1,38 @@
+/* 첨부한 css들이 해당 css에 주입됨 */
+@import "reset.css";
+@import "header.css";
+@import "footer.css";
+@import "main.css";
+
+:root {
+  --button-primary: rgb(238, 122, 105);
+  --button-hover: rgba(238, 122, 105, 0.6);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+}
+
+.media-info-msg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 100vw, vh: 화면의 100% */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  background-color: salmon;
+}
+
+/* 화면이 500px 이하일 때 화면에서 없애기 */
+@media screen and (max-width: 500px) {
+  .media-info-msg {
+    display: none;
+  }
+}
